@@ -1,9 +1,11 @@
 package agentscmdapi
 
 var (
-	ApiMap = map[string]string{
+	// APIMap - map of api verions
+	APIMap = map[string]string{
 		"jeep-v0.2.2": "jeep-api-v0.1.0",
 	}
+	// Comms - available commands
 	Comms = map[string]map[string][]string{
 		"jeep-api-v0.1.0": map[string][]string{
 			"s":          []string{"CMD010", "CMD020"},
