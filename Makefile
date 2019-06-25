@@ -2,6 +2,10 @@ GOCMD=go
 GOLINT=golint
 GOFMT=gofmt
 
+.PHONY: install
+install:
+	$(GOCMD) get golang.org/x/lint/golint
+
 .PHONY: lint
 lint:
 	./scripts/gofmt_test.sh
@@ -26,6 +30,9 @@ help:
 	@echo  '=================================='
 	@echo  'Available tasks:'
 	@echo  '=================================='
+	@echo  '* Installation:'
+	@echo  '- install         - Phony task that installs all required dependencies'
+	@echo  ''
 	@echo  '* Quality:'
 	@echo  '- lint            - Phony task that runs all linting tasks'
 	@echo  '- test            - Phony task that runs all unit tests'
